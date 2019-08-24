@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+
+
+#content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.content {
+    width: 45%;
+    display: inline-block;
+    float: left;
+    justify-content: space-evenly;
+    margin: 10px;
+    background-color: #ffebcc
+}
+
+.picture{
+    float: left;
+}
+
+.changepage{
+    width: 50%;
+    background-color: #ffebcc;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: left;
+}
+.changepage:hover{
+    color: orange;
+}
+.description{
+    font-size: 20px;
+    overflow: hidden;
+    white-space: pre-line;
+    background-color: aqua;
+    height: 68px;
+    width: 280px;
+    text-overflow: ellipsis;
+
+}
