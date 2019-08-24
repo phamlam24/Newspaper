@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tạo bài báo</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id='root'>
+        <h1>Tạo bài báo của bạn</h1>
+        <div id='creation'>
+            <input type="text" id='name' placeholder="Tên bài báo">
+            <br>
+            <input type='text' id='pic' placeholder="Ảnh (đường link)">
+            <br>
+            <input type="text" id='first' placeholder="Giới thiệu">
+            <br>
+            <input type="text" id='main' placeholder="Bài báo">
+            <br>
+            <input list='category'>
+            <datalist id="category">
+                <option value="ctri">Chính trị</option>
+                <option value="social">Xã hội</option>
+                <option value="sports">Thể thao</option>
+                <option value="showbiz">Showbiz</option>
+                <option value="tech">Công nghệ</option>
+                <option value="world">Thế giới</option>
+            </datalist>
+            <br>
+            <button>Tạo bài báo</button>
+        </div>
+    </div>
+
+    <script>
+        
+        $('button').on('click', function () {
+            var tag =  Math.floor(Math.random())*1000000000
+            $.ajax({
+                type: "POST",
+                data: {
+                   "tag" : tag,
+                   "name": document.getElementById('name').value,
+                   "picture": document.getElementById('pic').value,
+                   "category": document.getElementById('category').value,
+                   "content": [document.getElementById("first").value,document.getElementById("main")]
+                },
+                url: "https://5d4ebd08d3acc30014f3889a.mockapi.io/testApi"
+            })
+            console.log('sent')
+        })
+    </script>
+</body>
+
+</html>
