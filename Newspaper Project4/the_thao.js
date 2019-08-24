@@ -6,7 +6,7 @@ function fetchData() {
             <div class='content'>
             <img src="${news[x].picture}" class='picture' height=180 width=240>
             <button class='changepage' onclick="setpage(${news[x].tag})">${news[x].name}</button>
-            <p id='description'>${news[x].content[0]}</p>
+            <p class='description'>${news[x].content[0]}</p>
             </div>
             `  
             var contents = document.getElementById('content')

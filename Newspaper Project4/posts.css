@@ -16,7 +16,9 @@
     float: left;
     justify-content: space-evenly;
     margin: 10px;
-    background-color: #ffebcc
+    background-color: #ffebcc;
+    height: 208px;
+    
 }
 
 .picture{
@@ -37,9 +39,8 @@
 .description{
     font-size: 20px;
     overflow: hidden;
-    white-space: pre-line;
-    background-color: aqua;
-    height: 68px;
+    background-color: #ffebcc;
+    height: 67px;
     width: 280px;
     text-overflow: ellipsis;
 

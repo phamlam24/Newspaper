@@ -8,46 +8,68 @@
     <title>Tạo bài báo</title>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="create.css">
 </head>
 
 <body>
+    <div id='header'>
+        <div class="duoi">
+            <a href="./index.html"><img src="./logo.png" width=170 height=150 id='main'></a>
+            <a class="headlink" href="./chinh_tri.html">Chính trị</a>
+            <a class="headlink" href="./xa_hoi.html">Xã hội</a>
+            <a class="headlink" href="./the_thao.html">Thể thao</a>
+            <a class="headlink" href="./showbiz.html">Showbiz</a>
+            <a class="headlink" href="./cong_nghe.html">Công nghệ</a>
+            <a class="headlink" href="./the_gioi.html">Thế giới</a>
+            <!--Nho copy JS-->
+        </div>
+    </div>
     <div id='root'>
         <h1>Tạo bài báo của bạn</h1>
+        <div id="datetime"></div>
         <div id='creation'>
-            <input type="text" id='name' placeholder="Tên bài báo">
+            <h3>Tên bài báo...</h3>
+            <input type="text" id='name' class="inputs" placeholder="Tên bài báo">
             <br>
-            <input type='text' id='pic' placeholder="Ảnh (đường link)">
+            <h3>Ảnh...</h3>
+            <input type='text' id='pic' class="inputs" placeholder="Ảnh (đường link)">
             <br>
-            <input type="text" id='first' placeholder="Giới thiệu">
+            <h3>Đoạn văn giới thiệu...</h3>
+            <input type="text" id='first' class="inputs" placeholder="Giới thiệu">
             <br>
-            <input type="text" id='main' placeholder="Bài báo">
+            <h3>Các đoạn văn...</h3>
+            <textarea name="news" id='main1' placeholder="Bài báo" maxlength="5000" rows="20"
+                cols="100">Bài báo?</textarea>
             <br>
-            <input list='category'>
-            <datalist id="category">
+            <select id="category" aria-placeholder="Thể loại">
                 <option value="ctri">Chính trị</option>
                 <option value="social">Xã hội</option>
-                <option value="sports">Thể thao</option>
+                <option value="sport">Thể thao</option>
                 <option value="showbiz">Showbiz</option>
                 <option value="tech">Công nghệ</option>
                 <option value="world">Thế giới</option>
-            </datalist>
+            </select>
             <br>
             <button>Tạo bài báo</button>
         </div>
     </div>
 
     <script>
-        
         $('button').on('click', function () {
-            var tag =  Math.floor(Math.random())*1000000000
+            var tag = Math.floor(Math.random()) * 1000000000
+            let arrInfo = []
+            console.log(document.getElementById("first").value)
+            arrInfo.push(document.getElementById("first").value, document.getElementById("main1").value)
+            console.log(arrInfo)
             $.ajax({
                 type: "POST",
                 data: {
-                   "tag" : tag,
                    "name": document.getElementById('name').value,
                    "picture": document.getElementById('pic').value,
                    "category": document.getElementById('category').value,
-                   "content": [document.getElementById("first").value,document.getElementById("main")]
+                   "content": arrInfo,
+                   "time": new Date()
                 },
                 url: "https://5d4ebd08d3acc30014f3889a.mockapi.io/testApi"
             })
