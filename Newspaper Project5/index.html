@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OLDS - Tin tức mới nhất trong ngày</title>
+    <link rel="stylesheet" href="nav_homepage.css">
+    <link rel="stylesheet" href="cate.css">
+    <link rel="stylesheet" href="posts.css">
+    <link rel="stylesheet" href="tonhat.css">
+</head>
+<body>
+    <div id='header'>
+        <div class="duoi">
+            <a href="./index.html"><img src="./logo.png" width=170 height=150 id='main' class="logo_homepage"></a>
+            <a class="headlink tag" href="./xa_hoi.html"><h1 class="title category">Xã hội</h1></a>|
+            <a class="headlink tag" href="./the_thao.html"><h1 class="title category">Thể thao</h1></a>|
+            <a class="headlink tag" href="./the_gioi.html"><h1 class="title category">Thế giới</h1></a>|
+            <a class="headlink tag" href="./cong_nghe.html"><h1 class="title category">Công nghệ</h1></a>|
+            <a class="headlink tag" href="./showbiz.html"><h1 class="title category">Màn ảnh</h1></a>|
+            <a class="headlink tag" href="./chinh_tri.html"><h1 class="title category">Chính trị</h1></a> <!--Nho copy JS-->
+        </div>
+    </div>
+    <div id='title'>
+        <a href="index.html"><h3 class="choice">Trang chủ</h3></a>
+        <h3 class="choice">-</h3>
+        <a href="index.html"></a><h3 class="choice"> Tin tức trong ngày </h3></a>
+    </div>
+    <a href="create.html" id='linkcreate'>Dành cho nhà báo</a>
+    <hr>
+    <div class="tonhat">
+            <div class="khoi1">
+                    <div class='adv'>
+                            Quảng Cáo
+                        </div>
+                </div>
+            <div class="khoi2">
+                    <div class='whole'>
+                                <h1 id='tinnong'> </h1>
+                                <div id='content'></div>
+                            
+                        </div>
+                        <!-- het whole -->
+            </div>
+            <div class="khoi3">
+                    <div class='adv'>
+                            Quảng Cáo
+                        </div>
+            </div>
+    </div>
+    <!-- het to nhat -->
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="front_arrow.png" height="50" width="50"></button>
+    <div id='pagechanger'>
+        <button onclick="nextpage(0)" id="newnews0">&gt</button>
+        <button onclick="nextpage(1)" id="newnews1">&lt</button>
+        <button onclick="nextpage(2)" id="newnews2">&gt</button>
+        <button onclick="nextpage(3)" id="newnews3">&lt</button>
+        <button onclick="nextpage(4)" id="newnews4">&gt</button>
+        <button onclick="nextpage(-1)" id="backward">&lt</button>
+        <button onclick="nextpage(1)" id="forward">&gt</button>
+    </div>
+    <div id="footer">
+        <p>Đây là trang web báo mạng.
+        Được tạo bởi:  Phạm Tùng Lâm, Lương Tiến Anh, Nguyễn Lê Thành.
+        Trang web được viết ra không nhằm mục đích thương mại.
+        Liên hệ: 0123.456.789 - để biết thêm thông tin chi tiết.
+        </p>
+    </div>
+    <!--Scripts-->    
+    <script src="callApi.js"></script>
+    <script src='homepage.js'></script>
+</body>
+</html>

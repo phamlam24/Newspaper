@@ -1,0 +1,52 @@
+body {
+    position: relative;
+    background-color:  #fff5e6;
+
+ }
+ 
+ body:after {
+    content: '';
+    display: block;
+    height: 50px; /* Set same as footer's height */
+ }
+  #footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f0f0f0
+ }
+ #header {
+    background-color: orange; 
+    text-align: center
+ }
+ a.tag:link, a.tag:visited {
+    color: white;
+    padding: 12px 10px;
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: none;
+ }
+ a.logo_homepage:link, a.logo_homepage:visited {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+ }
+ a.tag:hover, a.tag:active {
+    background-color: rgb(211, 137, 0);
+ }
+
+ img {
+    size: 50
+    
+ }
+ .title {
+    display: inline-block;
+ }
+ .category{
+    width: 12%;
+    text-align: center;
+   
+ }
+ 
