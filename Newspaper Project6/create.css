@@ -1,0 +1,68 @@
+#header{
+    display: block;
+    width: 100%;
+    height: 100px;
+    border: 2px solid #FFaa73;
+    background-color: #FFaa73;
+}
+.duoi{
+    display: flex;
+    justify-content: space-around;
+}
+.tonhat{
+    display: flex;
+    justify-content: space-around;
+}
+.le_trai{
+    display: inline-block;
+    width: 10%;
+    background-color: #fff5e6;
+}
+.noi_dung_phieu_tra_loi{
+    display: inline-block;
+    width: 80%;
+}
+.le_phai{
+    display: inline-block;
+    width: 10%;
+    background-color:#fff5e6;
+}
+body{
+    background-color: #fff5e6;
+
+}
+.noi_dung_phieu_tra_loi{
+    text-align: center;
+}
+ 
+input{
+    text-align: center;
+    width: 735px;
+    height: 2em;
+}
+hr{
+    width: 50%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+    border-width: 0.5px;    
+    border-style: solid;
+    border-color: orange
+}
+.the_loai_bai_bao{
+    display: inline-flex;
+}
+#category{
+    height: 32px;
+    margin-top: 16px
+}
+.bo_cuc{
+    margin-top: 30px
+}
+h1{
+    font-size: 4em;
+    /* color: rgb(115, 136, 255) */
+}
+#first_line{
+    width: 100%;
+}
