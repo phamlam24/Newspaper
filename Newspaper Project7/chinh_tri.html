@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OLDS-Tin Chính Trị-Tin tức mới nhất trong ngày</title>
+    <script src="https://kit.fontawesome.com/3d0aa85a06.js"></script>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="cate.css">
+    <link rel="stylesheet" href="posts.css">
+    <link rel="stylesheet" href="tonhat.css">
+    <link rel="stylesheet" href="scrollButton.css">
+</head>
+<body>
+    <!-- Header và Navbar -->
+    <div id='header'>
+        <div class="duoi">
+            <a href="./index.html"><img src="./logo.png" width=170 height=150 id='main' class="logo_homepage"></a>
+            <a class="headlink tag" href="./xa_hoi.html"><h1 class="title category">Xã hội</h1></a>|
+            <a class="headlink tag" href="./the_thao.html"><h1 class="title category">Thể thao</h1></a>|
+            <a class="headlink tag" href="./the_gioi.html"><h1 class="title category">Thế giới</h1></a>|
+            <a class="headlink tag" href="./cong_nghe.html"><h1 class="title category">Công nghệ</h1></a>|
+            <a class="headlink tag" href="./showbiz.html"><h1 class="title category">Màn ảnh</h1></a>|
+            <a class="headlink tag" href="./chinh_tri.html"><h1 class="title category">Chính trị</h1></a> <!--Nho copy JS-->
+        </div>
+    </div>
+    <!-- Danh mục -->
+    <div id='title'>
+        <a href="index.html"><h3 class="choice">Trang chủ</h3></a>
+        <h3 class="choice">-</h3>
+        <a href="chinh_tri.html"><h3 class="choice">Chính trị</h3></a>
+    </div>
+    <hr>
+    <!-- các bài báo -->
+    <div id='whole'>
+        <div id='root'>
+            <div id='content'></div>
+        </div>
+    </div>
+
+    <!-- nut len dau trang -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- footer -->
+    <div id="footer">
+        <p>Đây là trang web báo mạng.
+        Được tạo bởi:  Phạm Tùng Lâm, Lương Tiến Anh, Nguyễn Lê Thành.
+        Trang web được viết ra không nhằm mục đích thương mại.
+        Liên hệ: 0123.456.789 - để biết thêm thông tin chi tiết.
+        </p>
+    </div>
+    <!--Scripts-->    
+    <script src="callApi.js"></script>
+    <script src='chinh_tri.js'></script>
+    <script src="scrollButton.js"></script>
+</body>
+</html>

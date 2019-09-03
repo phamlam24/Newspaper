@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tạo bài báo</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="create.css">
+</head>
+
+<body>
+    <div id='header'>
+        <div class="duoi">
+            <a href="./index.html"><img src="./logo.png" width=170 height=150 id='main'></a>
+            
+        </div>
+    </div>
+    <div class='bo_cuc'>
+        <div class='le_trai'></div>
+        <div class='noi_dung_phieu_tra_loi' id='root'>
+        <h1>Tạo bài báo của riêng bạn</h1>
+        <hr id=first_line>
+        <div id="datetime"></div>
+        <div id='creation'>
+            <h3>Tên bài báo:</h3>
+            <input type="text" id='name' class="inputs" placeholder="Tên bài báo">
+
+            <hr>
+            
+            <h3>Ảnh:</h3>
+            <input type='text' id='pic' class="inputs" placeholder="Ảnh (đường link)">
+            <hr>
+            <h3>Thông tin nhanh:</h3>
+            <input type="text" id='first' class="inputs" placeholder="Thông tin nhanh">
+            <hr>
+            <h3>Bài viết:</h3>
+            <textarea name="news" id='main1' placeholder="Bài báo?" maxlength="10000" rows="20"
+                cols="100"></textarea>
+            <hr>
+            <div class="the_loai_bai_bao">
+                <h3>Thể loại:</h3>
+                <select id="category" aria-placeholder="Thể loại">
+                     <option value="ctri">Chính trị</option>
+                    <option value="social">Xã hội</option>
+                    <option value="sport">Thể thao</option>
+                    <option value="showbiz">Showbiz</option>
+                    <option value="tech">Công nghệ</option>
+                    <option value="world">Thế giới</option>
+                </select>
+            </div>
+            
+            <hr>
+            <button>Tạo bài báo</button>
+        </div>
+        <div id="success"></div>
+    </div>
+    <div class='le_phai'></div>
+</div>
+    
+
+    <script>
+        $('button').on('click', function () {
+            var tag = Math.floor(Math.random()) * 1000000000
+            let arrInfo = []
+            console.log(document.getElementById("first").value)
+            arrInfo.push(document.getElementById("first").value, document.getElementById("main1").value)
+            console.log(arrInfo)
+            $.ajax({
+                type: "POST",
+                data: {
+                   "name": document.getElementById('name').value,
+                   "picture": document.getElementById('pic').value,
+                   "category": document.getElementById('category').value,
+                   "content": arrInfo,
+                   "time": new Date()
+                },
+                url: "https://5d4ebd08d3acc30014f3889a.mockapi.io/testApi"
+            })
+            console.log('sent')
+            document.getElementById("name").value=("")
+            document.getElementById("pic").value=("")
+            document.getElementById("first").value=("")
+            document.getElementById("main1").value=("")
+            alert('Tạo bài thành công!')
+        })
+    </script>
+</body>
+
+</html>

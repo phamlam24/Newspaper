@@ -1,0 +1,20 @@
+.tonhat{
+    display: flex;
+    justify-content: space-around;
+}
+.khoi1{
+    display: inline-block;
+    width: 10%;
+    background-color: none;
+}
+.khoi2{
+    display: inline-block;
+    width: 80%;
+}
+.khoi3{
+    display: inline-block;
+    width: 10%;
+    background-color:none;
+}
+
+/* css cho post */
